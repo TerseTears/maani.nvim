@@ -31,7 +31,32 @@ local mediumseagreen = hsl('#3CB371')
 local palegreen = hsl('#98FB98')
 local black = hsl('#000000')
 
--- set theme
+-- set neovim terminal colors
+
+vim.g.terminal_color_0 = black.hex
+vim.g.terminal_color_3 = orange.hex
+vim.g.terminal_color_11 = orangered.hex
+vim.g.terminal_color_12 = orangered.hex
+vim.g.terminal_color_13 = orangered.hex
+vim.g.terminal_color_14 = orangered.hex
+
+--- filetype colors
+
+vim.g.terminal_color_1 = dodgerblue.hex
+vim.g.terminal_color_2 = lime.hex
+vim.g.terminal_color_5 = mediumseagreen.hex
+vim.g.terminal_color_6 = palegreen.hex
+
+--- directory and prompt
+
+vim.g.terminal_color_4 = yellow.hex
+vim.g.terminal_color_7 = darkseagreen.hex
+vim.g.terminal_color_8 = royalblue.hex
+vim.g.terminal_color_9 = limegreen.hex
+vim.g.terminal_color_10 = gold.hex
+vim.g.terminal_color_15 = deeppink.hex
+
+-- set main theme
 
 local theme = lush(function()
     return {
@@ -49,7 +74,7 @@ local theme = lush(function()
         DiffChange   { fg=orange }, -- diff mode: Changed line |diff.txt|
         DiffDelete   { fg=orangered }, -- diff mode: Deleted line |diff.txt|
         -- DiffText     { }, -- diff mode: Changed text within a changed line |diff.txt|
-        EndOfBuffer  { fg=black }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+        EndOfBuffer  { fg=mediumslateblue }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
         -- TermCursor   { }, -- cursor in a focused terminal
         -- TermCursorNC { Cursor }, -- cursor in an unfocused terminal
         ErrorMsg     { fg=white, bg=firebrick }, -- error messages on the command line
@@ -61,11 +86,11 @@ local theme = lush(function()
         -- Substitute   { }, -- |:substitute| replacement text highlighting
         LineNr       { fg=slategray }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
         CursorLineNr { fg=silver }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-        MatchParen   { bg=orange }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+        MatchParen   { fg=black, bg=orange }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
         -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
         MsgArea      { gui="italic" }, -- Area for messages and cmdline
         -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-        -- MoreMsg      { }, -- |more-prompt|
+        MoreMsg      { fg=slategray }, -- |more-prompt|
         -- NonText      { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
         Normal       { fg=white, bg=cadetblue.darken(75) }, -- normal text
         -- NormalFloat  { }, -- Normal text in floating windows.
@@ -74,9 +99,9 @@ local theme = lush(function()
         PmenuSel     { fg=cadetblue.darken(50), bg=white }, -- Popup menu: selected item.
         -- PmenuSbar    { }, -- Popup menu: scrollbar.
         -- PmenuThumb   { }, -- Popup menu: Thumb of the scrollbar.
-        -- Question     { }, -- |hit-enter| prompt and yes/no questions
+        Question     { MoreMsg, gui="nocombine" }, -- |hit-enter| prompt and yes/no questions
         -- QuickFixLine { }, -- current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-        Search       { fg=darkorange, bg=gold, gui="bolditalic" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+        Search       { fg=black, bg=gold, gui="bolditalic" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
         -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
         -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
         -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -84,13 +109,13 @@ local theme = lush(function()
         -- SpellRare    { }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
         StatusLine   { fg=silver, gui="underlineitalicbold" }, -- status line of current window
         StatusLineNC { fg=slategray, gui="underlineitalic" }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-        TabLine      { Normal, gui="italic" }, -- tab pages line, not active tab page label
-        TabLineFill  { }, -- tab pages line, where there are no labels
-        TabLineSel   { StatusLineNC }, -- tab pages line, active tab page label
+        TabLine      { StatusLineNC, gui="italic" }, -- tab pages line, not active tab page label
+        TabLineFill  { Normal }, -- tab pages line, where there are no labels
+        TabLineSel   { StatusLine, gui="italicunderline" }, -- tab pages line, active tab page label
         Title        { fg=magenta.lighten(50) }, -- titles for output from ":set all", ":autocmd" etc.
         Visual       { bg=mediumseagreen }, -- Visual mode selection
         -- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
-        -- WarningMsg   { }, -- warning messages
+        WarningMsg   { fg=white, bg=firebrick, gui='bold' }, -- warning messages
         -- Whitespace   { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
         -- WildMenu     { }, -- current match in 'wildmenu' completion
 
@@ -105,7 +130,7 @@ local theme = lush(function()
         Float          { Number }, --    a floating point constant: 2.3e10
 
         Identifier     { fg=deepskyblue }, -- (preferred) any variable name
-        Function       { fg=royalblue.lighten(25), gui="bold" }, -- function name (also: methods for classes)
+        Function       { fg=dodgerblue, gui="bold" }, -- function name (also: methods for classes)
 
         Statement      { fg=yellow, gui="bold" }, -- (preferred) any statement
         Conditional    { fg=deeppink.lighten(25), gui="italic" }, --  if, then, else, endif, switch, etc.
@@ -115,7 +140,7 @@ local theme = lush(function()
             Keyword        { Statement }, --  any other keyword
             Exception      { Conditional }, --  try, catch, throw
 
-            PreProc        { fg=mediumslateblue.lighten(50) }, -- (preferred) generic Preprocessor
+            PreProc        { fg=royalblue.lighten(25) }, -- (preferred) generic Preprocessor
             -- Include        { }, --  preprocessor #include
             -- Define         { }, --   preprocessor #define
             -- Macro          { }, --    same as Define
@@ -142,7 +167,7 @@ local theme = lush(function()
 
             Error          { fg=white, bg=firebrick, gui='bold' }, -- (preferred) any erroneous construct
 
-            Todo           { fg=white, bg=darkorange }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+            Todo           { fg=black, bg=darkorange }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
         }
     end)
