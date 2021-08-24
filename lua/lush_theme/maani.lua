@@ -61,7 +61,7 @@ vim.g.terminal_color_15 = deeppink.hex
 local theme = lush(function()
     return {
 
-        Comment      { fg=cadetblue.darken(25).desaturate(50), gui="italic" }, -- any comment
+        Comment      { fg=cadetblue.lighten(25), gui="italic" }, -- any comment
         ColorColumn  { bg=cadetblue.darken(50) }, -- used for the columns set with 'colorcolumn'
         Conceal      { fg=white, bg=cadetblue.darken(75) }, -- placeholder characters substituted for concealed text (see 'conceallevel')
         -- Cursor       { }, -- character under the cursor
@@ -69,9 +69,9 @@ local theme = lush(function()
         -- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
         CursorColumn { ColorColumn }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
         CursorLine   { ColorColumn }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-        Directory    { fg=dodgerblue }, -- directory names (and other special names in listings)
+        Directory    { fg=dodgerblue.lighten(25) }, -- directory names (and other special names in listings)
         DiffAdd      { fg=darkseagreen }, -- diff mode: Added line |diff.txt|
-        DiffChange   { fg=orange }, -- diff mode: Changed line |diff.txt|
+        DiffChange   { fg=darkorange }, -- diff mode: Changed line |diff.txt|
         DiffDelete   { fg=orangered }, -- diff mode: Deleted line |diff.txt|
         -- DiffText     { }, -- diff mode: Changed text within a changed line |diff.txt|
         EndOfBuffer  { fg=mediumslateblue }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
@@ -86,12 +86,12 @@ local theme = lush(function()
         -- Substitute   { }, -- |:substitute| replacement text highlighting
         LineNr       { fg=slategray }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
         CursorLineNr { fg=silver }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-        MatchParen   { fg=black, bg=orange }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+        MatchParen   { fg=black, bg=darkorange }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
         -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
         MsgArea      { gui="italic" }, -- Area for messages and cmdline
         -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
         MoreMsg      { fg=slategray }, -- |more-prompt|
-        -- NonText      { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+        NonText      { fg=gold }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
         Normal       { fg=white, bg=cadetblue.darken(75) }, -- normal text
         -- NormalFloat  { }, -- Normal text in floating windows.
         -- NormalNC     { }, -- normal text in non-current windows
@@ -101,7 +101,7 @@ local theme = lush(function()
         -- PmenuThumb   { }, -- Popup menu: Thumb of the scrollbar.
         Question     { MoreMsg, gui="nocombine" }, -- |hit-enter| prompt and yes/no questions
         -- QuickFixLine { }, -- current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-        Search       { fg=black, bg=gold, gui="bolditalic" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+        Search       { fg=black, bg=orange, gui="italic" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
         -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
         -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
         -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -130,7 +130,7 @@ local theme = lush(function()
         Float          { Number }, --    a floating point constant: 2.3e10
 
         Identifier     { fg=deepskyblue }, -- (preferred) any variable name
-        Function       { fg=dodgerblue, gui="bold" }, -- function name (also: methods for classes)
+        Function       { fg=dodgerblue.saturate(100).lighten(25), gui="bold" }, -- function name (also: methods for classes)
 
         Statement      { fg=yellow, gui="bold" }, -- (preferred) any statement
         Conditional    { fg=deeppink.lighten(25), gui="italic" }, --  if, then, else, endif, switch, etc.
@@ -140,7 +140,7 @@ local theme = lush(function()
             Keyword        { Statement }, --  any other keyword
             Exception      { Conditional }, --  try, catch, throw
 
-            PreProc        { fg=royalblue.lighten(25) }, -- (preferred) generic Preprocessor
+            PreProc        { fg=royalblue.saturate(100).lighten(50) }, -- (preferred) generic Preprocessor
             -- Include        { }, --  preprocessor #include
             -- Define         { }, --   preprocessor #define
             -- Macro          { }, --    same as Define
@@ -151,7 +151,7 @@ local theme = lush(function()
             -- Structure      { }, --  struct, union, enum, etc.
             -- Typedef        { }, --  A typedef
 
-            Special        { fg=cornflowerblue.mix(lightskyblue, 50), gui="bold" }, -- (preferred) any special symbol
+            Special        { fg=cornflowerblue.mix(lightskyblue, 50).saturate(100).lighten(25), gui="bold" }, -- (preferred) any special symbol
             -- SpecialChar    { }, --  special character in a constant
             -- Tag            { }, --    you can use CTRL-] on this
             -- Delimiter      { }, --  character that needs attention
@@ -167,7 +167,7 @@ local theme = lush(function()
 
             Error          { fg=white, bg=firebrick, gui='bold' }, -- (preferred) any erroneous construct
 
-            Todo           { fg=black, bg=darkorange }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+            Todo           { fg=white, bg=darkorange.saturate(100), gui='bold' }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
         }
     end)
