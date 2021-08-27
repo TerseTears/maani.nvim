@@ -61,8 +61,8 @@ vim.g.terminal_color_15 = deeppink.hex
 local theme = lush(function()
     return {
 
-        Comment      { fg=cadetblue.lighten(25), gui="italic" }, -- any comment
-        ColorColumn  { bg=cadetblue.darken(50) }, -- used for the columns set with 'colorcolumn'
+        Comment      { fg=cadetblue }, -- any comment
+        ColorColumn  { bg=cadetblue.darken(75).saturate(100) }, -- used for the columns set with 'colorcolumn'
         Conceal      { fg=white, bg=cadetblue.darken(75) }, -- placeholder characters substituted for concealed text (see 'conceallevel')
         -- Cursor       { }, -- character under the cursor
         -- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -78,20 +78,20 @@ local theme = lush(function()
         -- TermCursor   { }, -- cursor in a focused terminal
         -- TermCursorNC { Cursor }, -- cursor in an unfocused terminal
         ErrorMsg     { fg=white, bg=firebrick }, -- error messages on the command line
-        VertSplit    { fg=slategray }, -- the column separating vertically split windows
+        VertSplit    { fg=Comment.fg.darken(25) }, -- the column separating vertically split windows
         Folded       { fg=silver, gui="bold" }, -- line used for closed folds
         FoldColumn   { fg=Folded.fg, bg= cadetblue.darken(75) }, -- 'foldcolumn'
         SignColumn   { FoldColumn }, -- column where |signs| are displayed
         -- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
         -- Substitute   { }, -- |:substitute| replacement text highlighting
-        LineNr       { fg=slategray }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-        CursorLineNr { fg=silver }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+        LineNr       { Comment, fg=Comment.fg.darken(25), gui="nocombine" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+        CursorLineNr { Comment, fg=Comment.fg.saturate(25), gui="nocombine" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
         MatchParen   { fg=black, bg=darkorange }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
         -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
         MsgArea      { gui="italic" }, -- Area for messages and cmdline
         -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
         MoreMsg      { fg=slategray }, -- |more-prompt|
-        NonText      { fg=gold }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+        NonText      { fg=gold.saturate(100) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
         Normal       { fg=white, bg=cadetblue.darken(75) }, -- normal text
         -- NormalFloat  { }, -- Normal text in floating windows.
         -- NormalNC     { }, -- normal text in non-current windows
@@ -107,8 +107,8 @@ local theme = lush(function()
         -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
         -- SpellLocal   { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
         -- SpellRare    { }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-        StatusLine   { fg=silver, gui="underlineitalicbold" }, -- status line of current window
-        StatusLineNC { fg=slategray, gui="underlineitalic" }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+        StatusLine   { Comment, fg=Comment.fg.saturate(25), gui="underlinebold" }, -- status line of current window
+        StatusLineNC { Comment, fg=Comment.fg.darken(25), gui="underline" }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
         TabLine      { StatusLineNC, gui="italic" }, -- tab pages line, not active tab page label
         TabLineFill  { Normal }, -- tab pages line, where there are no labels
         TabLineSel   { StatusLine, gui="italicunderline" }, -- tab pages line, active tab page label
