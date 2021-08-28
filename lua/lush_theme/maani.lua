@@ -115,7 +115,7 @@ local theme = lush(function()
         EndOfBuffer  { fg=mediumslateblue }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
         -- Whitespace   { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 
-        Search       { fg=black, bg=orange, gui="italic" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+        Search       { fg=black, bg=orange, gui="italicbold" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
         -- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
         -- Substitute   { }, -- |:substitute| replacement text highlighting
         -- QuickFixLine { }, -- current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -132,7 +132,7 @@ local theme = lush(function()
         -- NormalFloat  { }, -- Normal text in floating windows.
         -- NormalNC     { }, -- normal text in non-current windows
 
-        -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+        SpecialKey   { fg=lightskyblue }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
         -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
         -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
         -- SpellLocal   { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -188,6 +188,22 @@ local theme = lush(function()
 
             Todo           { fg=white, bg=darkorange.saturate(100), gui='bold' }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
+            -- Telescope highlighting (borders are ugly with default)
+            TelescopeNormal { Number },
+            TelescopeMatching { Special },
+            TelescopePromptBorder { NonText, gui="nocombine" },
+            TelescopeSelection { Boolean }, 
+            -- TelescopeMultiSelection { Search }, 
+            TelescopeSelectionCaret { PreProc }, 
+            TelescopePromptPrefix { Statement },
+            TelescopeResultsBorder { PreProc, gui="nocombine" },
+            TelescopePreviewBorder { Function, gui="nocombine" },
+
+            -- Dashboard highlighting
+            DashboardHeader { fg=cornflowerblue, gui="bold" },
+            DashboardCenter { String },
+            DashboardShortcut { NonText },
+            DashboardFooter { Title },
         }
     end)
 

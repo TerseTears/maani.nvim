@@ -26,19 +26,19 @@ local black = '#000000'
 
 return {
     normal = {
-        a = {bg = gold, fg = black, gui = "bold"},
-        b = {bg = white, fg = black},
+        a = {bg = white, fg = black, gui = "bold"},
+        b = {bg = gold, fg = black},
         c = {bg = royalblue, fg = black}
     },
     insert = {
-        a = {bg = cornflowerblue, fg = black, gui = 'bold'},
-        b = {bg = white, fg = black},
+        a = {bg = white, fg = black, gui = 'bold'},
+        b = {bg = cornflowerblue, fg = black},
         c = {bg = gold, fg = black}
     },
     visual = {
         a = {bg = cadetblue, fg = black, gui = "bold"},
-        b = {bg = limegreen, fg = black},
-        c = {bg = slategray, fg = black}
+        b = {bg = slategray, fg = black},
+        c = {bg = limegreen, fg = black}
     },
     replace = {
         a = {bg = deeppink, fg = black, gui = "bold"},
@@ -46,8 +46,8 @@ return {
         c = {bg = hotpink, fg = black}
     },
     command = {
-        a = {bg = yellow, fg = black, gui = "bold"},
-        b = {bg = white, fg = black},
+        a = {bg = white, fg = black, gui = "bold"},
+        b = {bg = yellow, fg = black},
         c = {bg = cornflowerblue, fg = black}
     },
     inactive = {
