@@ -33,28 +33,28 @@ local black = hsl('#000000')
 
 -- set neovim terminal colors
 
-vim.g.terminal_color_0 = black.hex
-vim.g.terminal_color_3 = orange.hex
-vim.g.terminal_color_11 = orangered.hex
-vim.g.terminal_color_12 = orangered.hex
-vim.g.terminal_color_13 = orangered.hex
-vim.g.terminal_color_14 = orangered.hex
+vim.g.terminal_color_0 = cadetblue.darken(75).hex
+vim.g.terminal_color_3 = gold.hex
+vim.g.terminal_color_11 = yellow.hex
+vim.g.terminal_color_12 = dodgerblue.hex
+vim.g.terminal_color_13 = hotpink.hex
+vim.g.terminal_color_14 = lightskyblue.hex
 
 --- filetype colors
 
-vim.g.terminal_color_1 = dodgerblue.hex
-vim.g.terminal_color_2 = lime.hex
-vim.g.terminal_color_5 = mediumseagreen.hex
-vim.g.terminal_color_6 = palegreen.hex
+vim.g.terminal_color_1 = firebrick.hex
+vim.g.terminal_color_2 = limegreen.hex
+vim.g.terminal_color_5 = deeppink.hex
+vim.g.terminal_color_6 = deepskyblue.hex
 
 --- directory and prompt
 
-vim.g.terminal_color_4 = yellow.hex
-vim.g.terminal_color_7 = darkseagreen.hex
-vim.g.terminal_color_8 = royalblue.hex
-vim.g.terminal_color_9 = limegreen.hex
-vim.g.terminal_color_10 = gold.hex
-vim.g.terminal_color_15 = deeppink.hex
+vim.g.terminal_color_4 = royalblue.hex
+vim.g.terminal_color_7 = silver.hex
+vim.g.terminal_color_8 = slategray.hex
+vim.g.terminal_color_9 = orangered.hex
+vim.g.terminal_color_10 = lime.hex
+vim.g.terminal_color_15 = white.hex
 
 -- set main theme
 
