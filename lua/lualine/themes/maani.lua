@@ -28,7 +28,7 @@ return {
     normal = {
         a = {bg = white, fg = black, gui = "bold"},
         b = {bg = gold, fg = black},
-        c = {bg = royalblue, fg = black}
+        c = {bg = cornflowerblue, fg = black}
     },
     insert = {
         a = {bg = white, fg = black, gui = 'bold'},
@@ -48,11 +48,11 @@ return {
     command = {
         a = {bg = white, fg = black, gui = "bold"},
         b = {bg = yellow, fg = black},
-        c = {bg = cornflowerblue, fg = black}
+        c = {bg = lightskyblue, fg = black}
     },
     inactive = {
         a = {bg = gold, fg = black, gui = "bold"},
         b = {bg = white, fg = black},
-        c = {bg = royalblue, fg = black}
+        c = {bg = royalblue, fg = white}
     }
 }

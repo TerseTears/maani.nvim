@@ -189,12 +189,12 @@ local theme = lush(function()
             Todo           { fg=white, bg=darkorange.saturate(100), gui='bold' }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
             -- Telescope highlighting (borders are ugly with default)
-            TelescopeNormal { Number },
+            TelescopeNormal { Constant },
             TelescopeMatching { Special },
             TelescopePromptBorder { NonText, gui="nocombine" },
-            TelescopeSelection { Boolean }, 
+            TelescopeSelection { Number }, 
             -- TelescopeMultiSelection { Search }, 
-            TelescopeSelectionCaret { PreProc }, 
+            TelescopeSelectionCaret { Boolean }, 
             TelescopePromptPrefix { Statement },
             TelescopeResultsBorder { PreProc, gui="nocombine" },
             TelescopePreviewBorder { Function, gui="nocombine" },
@@ -204,6 +204,31 @@ local theme = lush(function()
             DashboardCenter { String },
             DashboardShortcut { NonText },
             DashboardFooter { Title },
+
+            -- Trouble
+            TroubleCount {Number, gui='bold'}, 	-- TabLineSel
+            -- TroubleError { Error }, 	-- LspDiagnosticsDefaultError
+            -- TroubleNormal {}, 	-- Normal
+            TroubleLocation { Pmenu }, 	-- LineNr
+            -- TroubleWarning {}, 	-- LspDiagnosticsDefaultWarning
+            -- TroublePreview {}, 	-- Search
+            TroubleSignError { fg=orangered }, 	-- LspDiagnosticsSignError
+            TroubleTextError { fg=TroubleSignError.fg.lighten(50), gui='bold' }, 	-- TroubleText
+            TroubleSignWarning { fg=orange }, 	-- LspDiagnosticsSignWarning
+            TroubleTextWarning { fg=TroubleSignWarning.fg.lighten(50), gui='bold' }, 	-- TroubleText
+            TroubleSignHint { fg=mediumseagreen }, 	-- LspDiagnosticsSignHint
+            TroubleTextHint { fg=TroubleSignHint.fg.lighten(50)}, 	-- TroubleText
+            TroubleSignInformation { fg=lightskyblue }, 	-- LspDiagnosticsSignInformation
+             TroubleTextInformation { fg=TroubleSignInformation.fg.lighten(50) }, 	-- TroubleText
+            -- TroubleSignOther {}, 	-- TroubleSignInformation
+            -- TroubleInformation {  }, 	-- LspDiagnosticsDefaultInformation
+            -- TroubleIndent {}, 	-- LineNr
+            -- TroubleSource {}, 	-- Comment
+            -- TroubleFoldIcon {}, 	-- CursorLineNr
+            -- TroubleCode {}, 	-- Comment
+            -- TroubleFile {}, 	-- Directory
+            -- TroubleHint {}, 	-- LspDiagnosticsDefaultHint
+            -- TroubleText {}, 	-- Normal
         }
     end)
 
