@@ -93,21 +93,21 @@ local theme = lush(function()
 
         Directory    { fg=dodgerblue.lighten(25) }, -- directory names (and other special names in listings)
 
-        DiffAdd      { fg=darkseagreen }, -- diff mode: Added line |diff.txt|
-        DiffChange   { fg=darkorange }, -- diff mode: Changed line |diff.txt|
-        DiffDelete   { fg=orangered }, -- diff mode: Deleted line |diff.txt|
+        DiffAdd      { fg=black, bg=darkseagreen, gui='underline' }, -- diff mode: Added line |diff.txt|
+        DiffChange   { fg=black, bg=darkorange, gui='underlineundercurl' }, -- diff mode: Changed line |diff.txt|
+        DiffDelete   { fg=black, bg=orangered, gui='strikethroughunderline' }, -- diff mode: Deleted line |diff.txt|
         -- DiffText     { }, -- diff mode: Changed text within a changed line |diff.txt|
 
-        Title        { fg=magenta.lighten(50) }, -- titles for output from ":set all", ":autocmd" etc.
-        Visual       { bg=mediumseagreen }, -- Visual mode selection
+        Title        { fg=magenta.desaturate(50).lighten(50) }, -- titles for output from ":set all", ":autocmd" etc.
+        Visual       { bg=mediumseagreen, gui='underline' }, -- Visual mode selection
         -- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
-        MatchParen   { fg=black, bg=darkorange }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+        MatchParen   { fg=black, bg=darkorange, gui='underline' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 
         MsgArea      { gui="italic" }, -- Area for messages and cmdline
         MoreMsg      { fg=slategray }, -- |more-prompt|
         Question     { MoreMsg, gui="nocombine" }, -- |hit-enter| prompt and yes/no questions
-        ErrorMsg     { fg=white, bg=firebrick, gui='bold' }, -- error messages on the command line
+        ErrorMsg     { fg=white, bg=firebrick, gui='boldunderline' }, -- error messages on the command line
         WarningMsg   { ErrorMsg }, -- warning messages
         -- WildMenu     { }, -- current match in 'wildmenu' completion
 
@@ -115,7 +115,7 @@ local theme = lush(function()
         EndOfBuffer  { fg=mediumslateblue }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
         -- Whitespace   { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 
-        Search       { fg=black, bg=orange, gui="italicbold" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+        Search       { fg=black, bg=orange, gui="italicboldunderline" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
         -- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
         -- Substitute   { }, -- |:substitute| replacement text highlighting
         -- QuickFixLine { }, -- current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -184,9 +184,9 @@ local theme = lush(function()
             -- ("Ignore", below, may be invisible...)
             -- Ignore         { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
-            Error          { fg=white, bg=firebrick, gui='bold' }, -- (preferred) any erroneous construct
+            Error          { fg=white, bg=firebrick, gui='boldunderline' }, -- (preferred) any erroneous construct
 
-            Todo           { fg=white, bg=darkorange.saturate(100), gui='bold' }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+            Todo           { fg=white, bg=darkorange.saturate(100), gui='boldunderline' }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
             -- Telescope highlighting (borders are ugly with default)
             TelescopeNormal { Constant },
