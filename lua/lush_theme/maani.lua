@@ -99,7 +99,7 @@ local theme = lush(function()
         -- DiffText     { }, -- diff mode: Changed text within a changed line |diff.txt|
 
         Title        { fg=magenta.desaturate(50).lighten(50) }, -- titles for output from ":set all", ":autocmd" etc.
-        Visual       { bg=mediumseagreen, gui='underline' }, -- Visual mode selection
+        Visual       { bg=mediumseagreen }, -- Visual mode selection
         -- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
         MatchParen   { fg=black, bg=darkorange, gui='underline' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -148,7 +148,7 @@ local theme = lush(function()
         Boolean        { fg=hotpink }, --  a boolean constant: TRUE, false
         Float          { Number }, --    a floating point constant: 2.3e10
 
-        Identifier     { fg=deepskyblue }, -- (preferred) any variable name
+        Identifier     { fg=royalblue.saturate(100).lighten(50) }, -- (preferred) any variable name
         Function       { fg=dodgerblue.saturate(100).lighten(25), gui="bold" }, -- function name (also: methods for classes)
 
         Statement      { fg=yellow, gui="bold" }, -- (preferred) any statement
@@ -159,7 +159,7 @@ local theme = lush(function()
             Keyword        { Statement }, --  any other keyword
             Exception      { Conditional }, --  try, catch, throw
 
-            PreProc        { fg=royalblue.saturate(100).lighten(50) }, -- (preferred) generic Preprocessor
+            PreProc        { fg=deepskyblue }, -- (preferred) generic Preprocessor
             -- Include        { }, --  preprocessor #include
             -- Define         { }, --   preprocessor #define
             -- Macro          { }, --    same as Define
