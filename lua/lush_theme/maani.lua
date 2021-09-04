@@ -132,7 +132,7 @@ local theme = lush(function()
         -- NormalFloat  { }, -- Normal text in floating windows.
         -- NormalNC     { }, -- normal text in non-current windows
 
-        SpecialKey   { fg=lightskyblue }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+        SpecialKey   { fg=deepskyblue }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
         -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
         -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
         -- SpellLocal   { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -148,8 +148,8 @@ local theme = lush(function()
         Boolean        { fg=hotpink }, --  a boolean constant: TRUE, false
         Float          { Number }, --    a floating point constant: 2.3e10
 
-        Identifier     { fg=royalblue.saturate(100).lighten(50) }, -- (preferred) any variable name
-        Function       { fg=dodgerblue.saturate(100).lighten(25), gui="bold" }, -- function name (also: methods for classes)
+        Identifier     { fg=lightskyblue.desaturate(25) }, -- (preferred) any variable name
+        Function       { fg=cornflowerblue, gui="bold" }, -- function name (also: methods for classes)
 
         Statement      { fg=yellow, gui="bold" }, -- (preferred) any statement
         Conditional    { fg=deeppink.lighten(25), gui="italic" }, --  if, then, else, endif, switch, etc.
@@ -159,7 +159,7 @@ local theme = lush(function()
             Keyword        { Statement }, --  any other keyword
             Exception      { Conditional }, --  try, catch, throw
 
-            PreProc        { fg=deepskyblue }, -- (preferred) generic Preprocessor
+            PreProc        { fg=royalblue.saturate(100).lighten(50) }, -- (preferred) generic Preprocessor
             -- Include        { }, --  preprocessor #include
             -- Define         { }, --   preprocessor #define
             -- Macro          { }, --    same as Define
@@ -170,7 +170,7 @@ local theme = lush(function()
             -- Structure      { }, --  struct, union, enum, etc.
             -- Typedef        { }, --  A typedef
 
-            Special        { fg=cornflowerblue.mix(lightskyblue, 50).saturate(100).lighten(25), gui="bold" }, -- (preferred) any special symbol
+            Special        { fg=hsl('#778899').lighten(25), gui="bold" }, -- (preferred) any special symbol
             -- SpecialChar    { }, --  special character in a constant
             -- Tag            { }, --    you can use CTRL-] on this
             -- Delimiter      { }, --  character that needs attention
