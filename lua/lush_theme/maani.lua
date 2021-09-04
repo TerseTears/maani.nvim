@@ -91,7 +91,7 @@ local theme = lush(function()
 
         Conceal      { Normal }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
-        Directory    { fg=dodgerblue.lighten(25) }, -- directory names (and other special names in listings)
+        Directory    { fg=royalblue.saturate(100).lighten(50) }, -- directory names (and other special names in listings)
 
         DiffAdd      { fg=black, bg=darkseagreen, gui='underline' }, -- diff mode: Added line |diff.txt|
         DiffChange   { fg=black, bg=darkorange, gui='underlineundercurl' }, -- diff mode: Changed line |diff.txt|
@@ -159,7 +159,7 @@ local theme = lush(function()
             Keyword        { Statement }, --  any other keyword
             Exception      { Conditional }, --  try, catch, throw
 
-            PreProc        { fg=royalblue.saturate(100).lighten(50) }, -- (preferred) generic Preprocessor
+            PreProc        { fg=dodgerblue }, -- (preferred) generic Preprocessor
             -- Include        { }, --  preprocessor #include
             -- Define         { }, --   preprocessor #define
             -- Macro          { }, --    same as Define
@@ -200,7 +200,7 @@ local theme = lush(function()
             TelescopePreviewBorder { Function, gui="nocombine" },
 
             -- Dashboard highlighting
-            DashboardHeader { fg=cornflowerblue, gui="bold" },
+            DashboardHeader { fg=dodgerblue, gui="bold" },
             DashboardCenter { String },
             DashboardShortcut { NonText },
             DashboardFooter { Title },
