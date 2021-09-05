@@ -1,25 +1,25 @@
-# Maani Neovim Colorscheme
+# :bosnia_herzegovina: Maani Neovim Colorscheme
 
-![](maani_logo.png)
+![](https://user-images.githubusercontent.com/36173945/132120638-adad3a59-54eb-4a24-a6fd-62afbe5aef46.png)
 
-A theme inspired by the three colors of the Bosnian flag. Focus has been:
+A theme inspired by the three colors of the Bosnian flag, and :heart:. Focus has been:
 
-* Using rather distinctive and varied colors
-* Brighter colors reserved for highlight groups requiring greater attention (yellow, light blue)
+* Using rather distinct and varied colors
+* Brighter colors reserved for highlight groups requiring greater attention
 * Avoiding red altogether (except for errors)
 * Usefulness of highlighting hints
 * Proper terminal colors
-* Sensible colors even with reduced display temperatures
+* Sensible colors with reduced display temperatures
 * Only dark mode
-* No LSP groups highlighting (yet)
+* No LSP support (yet)
 * Neovim 0.5+ being a requirement
 
-# Screenshots
+# :film_strip: Screenshots
 
-![](scr1.png)
-![](scr2.png)
+![](https://user-images.githubusercontent.com/36173945/132120652-2e36a149-e6c7-479a-b804-8512d482bcf2.png)
+![](https://user-images.githubusercontent.com/36173945/132120657-afdaf01c-6fb6-445f-bb3d-63c9351625d8.png)
 
-# Installation
+# :vhs: Installation
 
 The theme is made using the wonderful [lush.nvim](https://github.com/rktjmp/lush.nvim) plugin and requires it as dependency:
 
@@ -29,20 +29,42 @@ Plug 'rktjmp/lush.nvim'
 Plug 'tersetears/maani.nvim'
 ```
 
-Of course, to set it as default theme, add or modify below lines in `init.nvim`:
+Of course, to set it as default theme, add or modify below line in `init.nvim`:
 
 ```vim
-set background=dark
 colorscheme maani
 ```
 
-# Making The Theme Better
+# :construction: Plugin Support
+
+
+These are the supported plugins
+
+* [Lualine](https://github.com/hoob3rt/lualine.nvim)
+* [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+* [Dashboard](https://github.com/glepnir/dashboard-nvim)
+* [Trouble](https://github.com/folke/trouble.nvim) (limited by lack of lsp support for now)
+
+
+I also use the following plugins and haven't had issues with the default colors provided by their fallback highlighting groups:
+
+- [Vim-Signify](https://github.com/mhinz/vim-signify)
+- [Nvim-Tree](https://github.com/kyazdani42/nvim-tree.lua)
+- [Nvim-Bufferline](https://github.com/akinsho/nvim-bufferline.lua)
+
+Additionally, I want to keep terminal colors nice as well, since I use terminals inside of Neovim quite often:
+
+![](https://user-images.githubusercontent.com/36173945/132120661-27391ef7-2642-4072-8804-0366cbf773c3.png)
+
+There is no tree-sitter *extra highlight* support (yet). I'm waiting for neovim 0.6 to seriously take into consideration tree-sitter's highlight capabilities. The default fallback colors may work well though.
+
+Nevertheless, if the colorscheme provides ugly colors for any plugins that you use, or any cli app, please do open an issue.
+
+# :hammer: Making The Theme Better
 
 If you find a part of the theme to not work as intended, or if you think part of it would benefit from different highlighting choices, please do open an issue. 
 
-If you require plugin support for sufficiently mature projects, please mention that as well, and I will try to include the necessary highlight groups. 
-
-Of course, bear in mind that you can always extend the theme using `lush` and `lua` quite easily, or you can simply take inspirations from this project and write your own colorscheme. Nevertheless, if you think any changes to the present colorscheme will be beneficial, I'm open to suggestions and fixes.
+Of course, bear in mind that you can always extend the theme using `lush` and `lua` quite easily.
 
 # A Lush Theme for Neovim.
 
