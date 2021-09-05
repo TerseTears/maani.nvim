@@ -91,7 +91,7 @@ local theme = lush(function()
 
         Conceal      { Normal }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 
-        Directory    { fg=royalblue.saturate(100).lighten(50) }, -- directory names (and other special names in listings)
+        Directory    { fg=royalblue.saturate(100).lighten(25) }, -- directory names (and other special names in listings)
 
         DiffAdd      { fg=black, bg=darkseagreen, gui='underline' }, -- diff mode: Added line |diff.txt|
         DiffChange   { fg=black, bg=darkorange, gui='underlineundercurl' }, -- diff mode: Changed line |diff.txt|
@@ -148,8 +148,8 @@ local theme = lush(function()
         Boolean        { fg=hotpink }, --  a boolean constant: TRUE, false
         Float          { Number }, --    a floating point constant: 2.3e10
 
-        Identifier     { fg=lightskyblue.desaturate(25) }, -- (preferred) any variable name
-        Function       { fg=cornflowerblue, gui="bold" }, -- function name (also: methods for classes)
+        Identifier     { fg=lightskyblue }, -- (preferred) any variable name
+        Function       { fg=dodgerblue.lighten(25), gui="bold" }, -- function name (also: methods for classes)
 
         Statement      { fg=yellow, gui="bold" }, -- (preferred) any statement
         Conditional    { fg=deeppink.lighten(25), gui="italic" }, --  if, then, else, endif, switch, etc.
@@ -159,7 +159,7 @@ local theme = lush(function()
             Keyword        { Statement }, --  any other keyword
             Exception      { Conditional }, --  try, catch, throw
 
-            PreProc        { fg=dodgerblue }, -- (preferred) generic Preprocessor
+            PreProc        { fg=cornflowerblue }, -- (preferred) generic Preprocessor
             -- Include        { }, --  preprocessor #include
             -- Define         { }, --   preprocessor #define
             -- Macro          { }, --    same as Define
