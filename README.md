@@ -10,8 +10,8 @@ A theme inspired by the three colors of the Bosnian flag, and :heart:. Focus has
 * Usefulness of highlighting hints
 * Proper terminal colors
 * Sensible colors with reduced display temperatures
+* LSP support
 * Only dark mode
-* No LSP support (yet)
 * Neovim 0.5+ being a requirement
 
 # :film_strip: Screenshots
@@ -43,7 +43,7 @@ These are the supported plugins
 * [Lualine](https://github.com/hoob3rt/lualine.nvim)
 * [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 * [Dashboard](https://github.com/glepnir/dashboard-nvim)
-* [Trouble](https://github.com/folke/trouble.nvim) (limited by lack of lsp support for now)
+* [Trouble](https://github.com/folke/trouble.nvim)
 * [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 
