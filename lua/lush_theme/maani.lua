@@ -188,6 +188,13 @@ local theme = lush(function()
 
             Todo           { fg=white, bg=darkorange.saturate(100), gui='boldunderline' }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
+            -- Treesitter
+
+            TSKeyword { Conditional },
+            TSKeywordFunction { PreProc },
+            TSFuncBuiltin { PreProc },
+            TSField { fg=deepskyblue },
+
             -- Telescope highlighting (borders are ugly with default)
             TelescopeNormal { Constant },
             TelescopeMatching { Special },

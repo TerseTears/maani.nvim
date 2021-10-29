@@ -44,6 +44,7 @@ These are the supported plugins
 * [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 * [Dashboard](https://github.com/glepnir/dashboard-nvim)
 * [Trouble](https://github.com/folke/trouble.nvim) (limited by lack of lsp support for now)
+* [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 
 I also use the following plugins and haven't had issues with the default colors provided by their fallback highlighting groups:
@@ -56,7 +57,7 @@ Additionally, I want to keep terminal colors nice as well, since I use terminals
 
 ![](https://user-images.githubusercontent.com/36173945/132120661-27391ef7-2642-4072-8804-0366cbf773c3.png)
 
-There is no tree-sitter *extra highlight* support (yet). I'm waiting for neovim 0.6 to seriously take into consideration tree-sitter's highlight capabilities. The default fallback colors may work well though.
+ Tree-sitter support is also somewhat partial. I've only checked for troublesome fallback colors in various languages and have applied the necessary fixes. I believe the fallback colors, based on the defaults specified [here](https://github.com/nvim-treesitter/nvim-treesitter/blob/master/plugin/nvim-treesitter.vim) provide all the essential highlightings.
 
 Nevertheless, if the colorscheme provides ugly colors for any plugins that you use, or any cli app, please do open an issue.
 
