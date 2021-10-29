@@ -61,7 +61,7 @@ vim.g.terminal_color_15 = white.hex
 local theme = lush(function()
     return {
 
-        Normal       { fg=white, bg=cadetblue.darken(75) }, -- normal text
+        Normal       { fg=white, bg=mediumslateblue.darken(75).desaturate(75) }, -- normal text
 
         Comment      { fg=cadetblue }, -- any comment
 
@@ -76,7 +76,7 @@ local theme = lush(function()
         TabLineFill  { Normal }, -- tab pages line, where there are no labels
         TabLineSel   { StatusLine, gui="italicunderline" }, -- tab pages line, active tab page label
 
-        ColorColumn  { bg=Normal.bg.saturate(100) }, -- used for the columns set with 'colorcolumn'
+        ColorColumn  { bg=Normal.bg.darken(25) }, -- used for the columns set with 'colorcolumn'
         CursorColumn { ColorColumn }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
         CursorLine   { ColorColumn }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 
