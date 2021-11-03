@@ -16,8 +16,8 @@ A theme inspired by the three colors of the Bosnian flag, and :heart:. Focus has
 
 # :film_strip: Screenshots
 
-![](https://user-images.githubusercontent.com/36173945/132120652-2e36a149-e6c7-479a-b804-8512d482bcf2.png)
-![](https://user-images.githubusercontent.com/36173945/132120657-afdaf01c-6fb6-445f-bb3d-63c9351625d8.png)
+![](https://user-images.githubusercontent.com/36173945/140066044-14de55c5-eab6-4bd9-9d1c-a5268e7bb8da.png)
+![](https://user-images.githubusercontent.com/36173945/140066006-6080840a-3114-4f2c-84fd-63aadaa26780.png)
 
 # :vhs: Installation
 
@@ -56,7 +56,7 @@ I also use the following plugins and haven't had issues with the default colors 
 
 Additionally, I want to keep terminal colors nice as well, since I use terminals inside of Neovim quite often:
 
-![](https://user-images.githubusercontent.com/36173945/132120661-27391ef7-2642-4072-8804-0366cbf773c3.png)
+![](https://user-images.githubusercontent.com/36173945/140066074-20b435f4-a35e-4f89-91d0-0fe6e1117b6d.png)
 
  Tree-sitter support is also somewhat partial. I've only checked for troublesome fallback colors in various languages and have applied the necessary fixes. I believe the fallback colors, based on the defaults specified [here](https://github.com/nvim-treesitter/nvim-treesitter/blob/master/plugin/nvim-treesitter.vim) provide all the essential highlightings.
 
