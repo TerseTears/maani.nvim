@@ -45,11 +45,12 @@ These are the supported plugins
 * [Dashboard](https://github.com/glepnir/dashboard-nvim)
 * [Trouble](https://github.com/folke/trouble.nvim)
 * [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Vim-Signify](https://github.com/mhinz/vim-signify) (and [GitSigns](https://github.com/lewis6991/gitsigns.nvim))
 
 
 I also use the following plugins and haven't had issues with the default colors provided by their fallback highlighting groups:
 
-- [Vim-Signify](https://github.com/mhinz/vim-signify)
+* [WhichKey](https://github.com/folke/which-key.nvim)
 - [Nvim-Tree](https://github.com/kyazdani42/nvim-tree.lua)
 - [Nvim-Bufferline](https://github.com/akinsho/nvim-bufferline.lua)
 

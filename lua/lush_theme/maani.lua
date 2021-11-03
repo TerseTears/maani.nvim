@@ -99,7 +99,7 @@ local theme = lush(function()
         -- DiffText     { }, -- diff mode: Changed text within a changed line |diff.txt|
 
         Title        { fg=magenta.desaturate(50).lighten(50) }, -- titles for output from ":set all", ":autocmd" etc.
-        Visual       { bg=mediumseagreen }, -- Visual mode selection
+        Visual       { bg=mediumseagreen.darken(50) }, -- Visual mode selection
         -- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
         MatchParen   { fg=black, bg=darkorange, gui='underline' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -268,6 +268,17 @@ local theme = lush(function()
             -- TroubleFile {}, 	-- Directory
             -- TroubleHint {}, 	-- LspDiagnosticsDefaultHint
             -- TroubleText {}, 	-- Normal
+
+            -- gitsigns 
+            GitSignsAdd {fg = DiffAdd.bg },
+            GitSignsChange { fg = DiffChange.bg },  
+            GitSignsDelete { fg = DiffDelete.bg }, 
+
+            -- vim-signify
+            SignifySignAdd {fg = DiffAdd.bg },
+            SignifySignChange { fg = DiffChange.bg },  
+            SignifySignDelete { fg = DiffDelete.bg }, 
+
         }
     end)
 
