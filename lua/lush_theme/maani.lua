@@ -98,7 +98,7 @@ local theme = lush(function()
         DiffDelete   { fg=black, bg=orangered }, -- diff mode: Deleted line |diff.txt|
         -- DiffText     { }, -- diff mode: Changed text within a changed line |diff.txt|
 
-        Title        { fg=deepskyblue }, -- titles for output from ":set all", ":autocmd" etc.
+        Title        { fg=deepskyblue.saturate(100).lighten(25) }, -- titles for output from ":set all", ":autocmd" etc.
         Visual       { bg=mediumseagreen.darken(50) }, -- Visual mode selection
         -- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
@@ -272,6 +272,32 @@ local theme = lush(function()
             SignifySignAdd {fg = DiffAdd.bg },
             SignifySignChange { fg = DiffChange.bg },  
             SignifySignDelete { fg = DiffDelete.bg }, 
+
+            -- org-mode
+            OrgAgendaScheduled { Title },
+            OrgAgendaScheduledPast { fg=mediumslateblue.lighten(50) },
+            OrgAgendaDeadline { fg=magenta.lighten(50), gui='bold' },
+            OrgTSTag { Conditional },
+            OrgTSTimestampActive { String },
+            OrgTSTimestampInactive { Constant },
+            OrgTSPlan { Constant },
+            OrgTSCheckboxChecked { DiffAdd },
+            OrgTSCheckboxHalfChecked { DiffChange },
+            OrgTSCheckboxUnchecked { DiffDelete },
+            OrgTSHeadlineLevel1 { fg=Title.fg.saturate(100) },
+            OrgTSHeadlineLevel2 { fg=OrgTSHeadlineLevel1.fg.desaturate(25) },
+            OrgTSHeadlineLevel3 { fg=OrgTSHeadlineLevel2.fg.desaturate(25) },
+            OrgTSHeadlineLevel4 { fg=OrgTSHeadlineLevel3.fg.desaturate(25) },
+            OrgTSHeadlineLevel5 { fg=OrgTSHeadlineLevel4.fg.desaturate(25) },
+            OrgTSHeadlineLevel6 { OrgTSHeadlineLevel5 },
+            OrgTSHeadlineLevel7 { OrgTSHeadlineLevel5 },
+            OrgTSHeadlineLevel8 { OrgTSHeadlineLevel5 },
+            OrgTSPropertyDrawer { NonText },
+            OrgTSDrawer { MoreMsg },
+            OrgTSDirective { Special },
+            OrgTODO { Keyword },
+            OrgAgendaDay { Visual },
+            OrgAgendaTags { gui='inverse' },
 
         }
     end)
