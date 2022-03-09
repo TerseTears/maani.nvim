@@ -190,38 +190,32 @@ local theme = lush(function()
 
             -- LSP
 
-            LspDiagnosticsDefaultError               { fg=orangered}, -- Used for "Error" signs in sign column
-            LspDiagnosticsDefaultWarning             { fg=orange }, -- Used for "Warning" signs in sign column
-            LspDiagnosticsDefaultHint                { fg=mediumseagreen }, -- Used for "Information" signs in sign column
-            LspDiagnosticsDefaultInformation         { fg=lightskyblue }, -- Used for "Hint" signs in sign column
+            DiagnosticError               { fg=orangered.desaturate(25) }, -- Used for "Error" signs in sign column
+            DiagnosticWarn             { fg=orange }, -- Used for "Warning" signs in sign column
+            DiagnosticHint                { fg=mediumseagreen }, -- Used for "Information" signs in sign column
+            DiagnosticInfo         { fg=lightskyblue }, -- Used for "Hint" signs in sign column
 
-            LspDiagnosticsSignError          { LspDiagnosticsDefaultError }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-            LspDiagnosticsSignWarning        { LspDiagnosticsDefaultWarning }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-            LspDiagnosticsSignHint           { LspDiagnosticsDefaultHint }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-            LspDiagnosticsSignInformation    { LspDiagnosticsDefaultInformation }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+            DiagnosticSignError          { DiagnosticError }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+            DiagnosticSignWarn        { DiagnosticWarn }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+            DiagnosticSignHint           { DiagnosticHint }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+            DiagnosticSignInfo    { DiagnosticInfo }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
-            LspDiagnosticsVirtualTextError       { fg=LspDiagnosticsDefaultError.fg.lighten(50), gui='bold' }, -- Used for "Error" diagnostic virtual text
-            LspDiagnosticsVirtualTextWarning     { fg=LspDiagnosticsDefaultWarning.fg.lighten(50), gui='bold' }, -- Used for "Warning" diagnostic virtual text
-            LspDiagnosticsVirtualTextHint        { fg=LspDiagnosticsDefaultHint.fg.lighten(50) }, -- Used for "Hint" diagnostic virtual text
-            LspDiagnosticsVirtualTextInformation { fg=LspDiagnosticsDefaultInformation.fg.lighten(50) }, -- Used for "Information" diagnostic virtual text
+            DiagnosticVirtualTextError       { fg=DiagnosticError.fg.lighten(25), gui='bold' }, -- Used for "Error" diagnostic virtual text
+            DiagnosticVirtualTextWarn     { fg=DiagnosticWarn.fg.lighten(50), gui='bold' }, -- Used for "Warning" diagnostic virtual text
+            DiagnosticVirtualTextHint        { fg=DiagnosticHint.fg.lighten(50) }, -- Used for "Hint" diagnostic virtual text
+            DiagnosticVirtualTextInfo { fg=DiagnosticInfo.fg.lighten(50) }, -- Used for "Information" diagnostic virtual text
 
-            LspDiagnosticsUnderlineError         { gui='underline' }, -- Used to underline "Error" diagnostics
-            LspDiagnosticsUnderlineWarning       { gui='underline' }, -- Used to underline "Warning" diagnostics
-            LspDiagnosticsUnderlineHint          { gui='underline' }, -- Used to underline "Hint" diagnostics
-            LspDiagnosticsUnderlineInformation   { gui='underline' }, -- Used to underline "Information" diagnostics
+            DiagnosticUnderlineError         { gui='underline' }, -- Used to underline "Error" diagnostics
+            DiagnosticUnderlineWarn       { gui='underline' }, -- Used to underline "Warning" diagnostics
+            DiagnosticUnderlineHint          { gui='underline' }, -- Used to underline "Hint" diagnostics
+            DiagnosticUnderlineInfo   { gui='underline' }, -- Used to underline "Information" diagnostics
 
-            LspDiagnosticsFloatingError          { LspDiagnosticsVirtualTextError }, -- Used to color "Error" diagnostic messages in diagnostics float
-            LspDiagnosticsFloatingWarning        { LspDiagnosticsVirtualTextWarning }, -- Used to color "Warning" diagnostic messages in diagnostics float
-            LspDiagnosticsFloatingHint           { LspDiagnosticsVirtualTextHint }, -- Used to color "Hint" diagnostic messages in diagnostics float
-            LspDiagnosticsFloatingInformation    { LspDiagnosticsVirtualTextInformation }, -- Used to color "Information" diagnostic messages in diagnostics float
-
-            -- LspReferenceText                     { }, -- used for highlighting "text" references
-            -- LspReferenceRead                     { }, -- used for highlighting "read" references
-            -- LspReferenceWrite                    { }, -- used for highlighting "write" references
-            -- LspCodeLens                          { }, -- Used to color the virtual text of the codelens
+            DiagnosticFloatingError          { DiagnosticVirtualTextError }, -- Used to color "Error" diagnostic messages in diagnostics float
+            DiagnosticFloatingWarn        { DiagnosticVirtualTextWarn }, -- Used to color "Warning" diagnostic messages in diagnostics float
+            DiagnosticFloatingHint           { DiagnosticVirtualTextHint }, -- Used to color "Hint" diagnostic messages in diagnostics float
+            DiagnosticFloatingInfo    { DiagnosticVirtualTextInfo }, -- Used to color "Information" diagnostic messages in diagnostics float
 
             -- Treesitter
-
             TSKeyword { Conditional },
             TSKeywordFunction { PreProc },
             TSFuncBuiltin { PreProc },
@@ -251,11 +245,11 @@ local theme = lush(function()
             TroubleLocation { Pmenu }, 	-- LineNr
             -- TroubleWarning {}, 	-- LspDiagnosticsDefaultWarning
             -- TroublePreview {}, 	-- Search
-            TroubleSignError { LspDiagnosticsSignError }, 	-- LspDiagnosticsSignError
-            TroubleSignWarning { LspDiagnosticsSignWarning }, 	-- LspDiagnosticsSignWarning
-            TroubleSignHint { LspDiagnosticsSignHint }, 	-- LspDiagnosticsSignHint
-            TroubleSignInformation { LspDiagnosticsSignInformation }, 	-- LspDiagnosticsSignInformation
-            TroubleTextError { fg=TroubleSignError.fg.lighten(50), gui='bold' }, 	-- TroubleText
+            TroubleSignError { DiagnosticSignError }, 	-- LspDiagnosticsSignError
+            TroubleSignWarning { DiagnosticSignWarn }, 	-- LspDiagnosticsSignWarning
+            TroubleSignHint { DiagnosticSignHint }, 	-- LspDiagnosticsSignHint
+            TroubleSignInformation { DiagnosticSignInfo }, 	-- LspDiagnosticsSignInformation
+            TroubleTextError { fg=TroubleSignError.fg.lighten(25), gui='bold' }, 	-- TroubleText
             TroubleTextWarning { fg=TroubleSignWarning.fg.lighten(50), gui='bold' }, 	-- TroubleText
             TroubleTextHint { fg=TroubleSignHint.fg.lighten(50)}, 	-- TroubleText
              TroubleTextInformation { fg=TroubleSignInformation.fg.lighten(50) }, 	-- TroubleText
