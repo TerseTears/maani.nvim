@@ -76,7 +76,7 @@ local theme = lush(function()
         TabLineFill  { Normal }, -- tab pages line, where there are no labels
         TabLineSel   { StatusLine, gui="italicunderline" }, -- tab pages line, active tab page label
 
-        ColorColumn  { bg=Normal.bg.darken(25) }, -- used for the columns set with 'colorcolumn'
+        ColorColumn  { bg=Normal.bg.lighten(5) }, -- used for the columns set with ''
         CursorColumn { ColorColumn }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
         CursorLine   { ColorColumn }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 
@@ -93,16 +93,16 @@ local theme = lush(function()
 
         Directory    { fg=royalblue.saturate(100).lighten(25) }, -- directory names (and other special names in listings)
 
-        DiffAdd      { fg=black, bg=darkseagreen, gui='underline' }, -- diff mode: Added line |diff.txt|
-        DiffChange   { fg=black, bg=darkorange, gui='underlineundercurl' }, -- diff mode: Changed line |diff.txt|
-        DiffDelete   { fg=black, bg=orangered, gui='strikethroughunderline' }, -- diff mode: Deleted line |diff.txt|
+        DiffAdd      { fg=black, bg=limegreen }, -- diff mode: Added line |diff.txt|
+        DiffChange   { fg=black, bg=darkorange }, -- diff mode: Changed line |diff.txt|
+        DiffDelete   { fg=black, bg=orangered }, -- diff mode: Deleted line |diff.txt|
         -- DiffText     { }, -- diff mode: Changed text within a changed line |diff.txt|
 
-        Title        { fg=magenta.desaturate(50).lighten(50) }, -- titles for output from ":set all", ":autocmd" etc.
+        Title        { fg=deepskyblue }, -- titles for output from ":set all", ":autocmd" etc.
         Visual       { bg=mediumseagreen.darken(50) }, -- Visual mode selection
         -- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
 
-        MatchParen   { fg=black, bg=darkorange, gui='underline' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+        MatchParen   { fg=white, bg=darkorange, gui='underline' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 
         MsgArea      { gui="italic" }, -- Area for messages and cmdline
         MoreMsg      { fg=slategray }, -- |more-prompt|
@@ -132,7 +132,7 @@ local theme = lush(function()
         -- NormalFloat  { }, -- Normal text in floating windows.
         -- NormalNC     { }, -- normal text in non-current windows
 
-        SpecialKey   { fg=deepskyblue }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+        SpecialKey   { fg=magenta.desaturate(25).lighten(25) }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
         -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise. 
         -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
         -- SpellLocal   { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -141,7 +141,7 @@ local theme = lush(function()
         -- These groups are not listed as default vim groups,
         -- but they are defacto standard group names for syntax highlighting.
 
-        Constant       { fg=limegreen }, -- (preferred) any constant
+        Constant       { fg=darkseagreen }, -- (preferred) any constant
         String         { fg=palegreen }, --   a string constant: "this is a string"
         Character      { String }, --  a character constant: 'c', '\n'
         Number         { fg=lime }, --   a number constant: 234, 0xff
