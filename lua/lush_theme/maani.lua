@@ -231,6 +231,7 @@ local theme = lush(function()
             TelescopePromptPrefix { Statement },
             TelescopeResultsBorder { PreProc, gui="nocombine" },
             TelescopePreviewBorder { Function, gui="nocombine" },
+            TelescopePreviewLine { Search, gui='inverse' },
 
             -- Dashboard highlighting
             DashboardHeader { fg=dodgerblue, gui="bold" },
