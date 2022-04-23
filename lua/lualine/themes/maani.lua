@@ -3,7 +3,7 @@ local deepskyblue = '#00BFFF'
 local cornflowerblue = '#6495ED'
 local dodgerblue = '#1E90FF'
 local royalblue = '#4169E1'
-local mediumslateblue = '#7B68EE'
+local darkenmediumslateblue = '#252334'
 local white = '#FFFFFF'
 local silver = '#C0C0C0'
 local slategray = '#708090'
@@ -26,33 +26,33 @@ local black = '#000000'
 
 return {
     normal = {
-        a = {bg = white, fg = black, gui = "bold"},
+        a = {bg = cornflowerblue, fg = black, gui = "bold"},
         b = {bg = gold, fg = black},
-        c = {bg = cornflowerblue, fg = black}
+        c = {bg = darkenmediumslateblue, fg = white}
     },
     insert = {
-        a = {bg = white, fg = black, gui = 'bold'},
+        a = {bg = gold, fg = black, gui = "bold"},
         b = {bg = cornflowerblue, fg = black},
-        c = {bg = gold, fg = black}
+        c = {bg = darkenmediumslateblue, fg = white}
     },
     visual = {
-        a = {bg = cadetblue, fg = black, gui = "bold"},
-        b = {bg = slategray, fg = black},
-        c = {bg = limegreen, fg = black}
+        a = {bg = limegreen, fg = black, gui = "bold"},
+        b = {bg = cadetblue, fg = black},
+        c = {bg = darkenmediumslateblue, fg = white}
     },
     replace = {
         a = {bg = deeppink, fg = black, gui = "bold"},
-        b = {bg = magenta, fg = black},
-        c = {bg = hotpink, fg = black}
+        b = {bg = hotpink, fg = black},
+        c = {bg = darkenmediumslateblue, fg = white}
     },
     command = {
-        a = {bg = white, fg = black, gui = "bold"},
+        a = {bg = lightskyblue, fg = black, gui = "bold"},
         b = {bg = yellow, fg = black},
-        c = {bg = lightskyblue, fg = black}
+        c = {bg = darkenmediumslateblue, fg = white}
     },
     inactive = {
         a = {bg = gold, fg = black, gui = "bold"},
         b = {bg = white, fg = black},
-        c = {bg = royalblue, fg = white}
+        c = {bg = darkenmediumslateblue, fg = white}
     }
 }
