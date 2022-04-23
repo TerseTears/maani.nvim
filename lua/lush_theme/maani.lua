@@ -299,7 +299,11 @@ local theme = lush(function()
             OrgAgendaDay { Visual },
             OrgAgendaTags { gui='inverse' },
 
+            -- aerial
+            AerialLine              { bg=Pmenu.bg },
+            AerialGuide             { fg=ColorColumn.bg.lighten(25) },
         }
+
     end)
 
     return theme

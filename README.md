@@ -37,26 +37,25 @@ colorscheme maani
 
 # :construction: Plugin Support
 
-
 These are the supported plugins
 
-* [Orgmode](https://github.com/nvim-orgmode/orgmode)
-* [Lualine](https://github.com/hoob3rt/lualine.nvim)
-* [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-* [Dashboard](https://github.com/glepnir/dashboard-nvim)
-* [Trouble](https://github.com/folke/trouble.nvim)
-* [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Orgmode](https://github.com/nvim-orgmode/orgmode)
+- [Lualine](https://github.com/hoob3rt/lualine.nvim)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Aerial](https://github.com/stevearc/aerial.nvim)
+- [Dashboard](https://github.com/glepnir/dashboard-nvim)
+- [Trouble](https://github.com/folke/trouble.nvim)
+- [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Vim-Signify](https://github.com/mhinz/vim-signify) (and [GitSigns](https://github.com/lewis6991/gitsigns.nvim))
 
 ![](https://user-images.githubusercontent.com/36173945/158016445-e57518d5-28d4-4aff-a30d-89429aafa567.png)
 
 I also use the following plugins and haven't had issues with the default colors provided by their fallback highlighting groups:
 
-* [WhichKey](https://github.com/folke/which-key.nvim)
+- [WhichKey](https://github.com/folke/which-key.nvim)
 - [Nvim-Tree](https://github.com/kyazdani42/nvim-tree.lua)
 - [Nvim-Bufferline](https://github.com/akinsho/nvim-bufferline.lua)
-* [Symbols-Outline](https://github.com/simrat39/symbols-outline.nvim)
-* [LSP_Signature](https://github.com/ray-x/lsp_signature.nvim)
+- [LSP_Signature](https://github.com/ray-x/lsp_signature.nvim)
 
  Tree-sitter support is also somewhat partial. I've only checked for troublesome fallback colors in various languages and have applied the necessary fixes. I believe the fallback colors, based on the defaults specified [here](https://github.com/nvim-treesitter/nvim-treesitter/blob/master/plugin/nvim-treesitter.vim) provide all the essential highlightings.
 
@@ -64,7 +63,7 @@ Nevertheless, if the colorscheme provides ugly colors for any plugins that you u
 
 # :hammer: Making The Theme Better
 
-If you find a part of the theme to not work as intended, or if you think part of it would benefit from different highlighting choices, please do open an issue. 
+If you find a part of the theme not working as intended, or if you think part of it would benefit from different highlighting choices, please do open an issue. 
 
 Of course, bear in mind that you can always extend the theme using `lush` and `lua` quite easily.
 
