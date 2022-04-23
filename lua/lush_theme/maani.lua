@@ -76,7 +76,7 @@ local theme = lush(function()
         TabLineFill  { Normal }, -- tab pages line, where there are no labels
         TabLineSel   { StatusLine, gui="italicunderline" }, -- tab pages line, active tab page label
 
-        ColorColumn  { bg=Normal.bg.lighten(5) }, -- used for the columns set with ''
+        ColorColumn  { bg=deepskyblue.darken(75) }, -- used for the columns set with ''
         CursorColumn { ColorColumn }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
         CursorLine   { ColorColumn }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
 
@@ -265,18 +265,18 @@ local theme = lush(function()
 
             -- gitsigns 
             GitSignsAdd {fg = DiffAdd.bg },
-            GitSignsChange { fg = DiffChange.bg },  
-            GitSignsDelete { fg = DiffDelete.bg }, 
+            GitSignsChange { fg = DiffChange.bg },
+            GitSignsDelete { fg = DiffDelete.bg },
 
             -- vim-signify
             SignifySignAdd {fg = DiffAdd.bg },
-            SignifySignChange { fg = DiffChange.bg },  
-            SignifySignDelete { fg = DiffDelete.bg }, 
+            SignifySignChange { fg = DiffChange.bg },
+            SignifySignDelete { fg = DiffDelete.bg },
 
             -- org-mode
-            OrgAgendaScheduled { Title },
-            OrgAgendaScheduledPast { fg=mediumslateblue.lighten(50) },
-            OrgAgendaDeadline { fg=magenta.lighten(50), gui='bold' },
+            OrgAgendaScheduled { fg=deepskyblue.lighten(25) },
+            OrgAgendaScheduledPast { fg=dodgerblue.lighten(25), gui='bold' },
+            OrgAgendaDeadline { fg=magenta.lighten(25) },
             OrgTSTag { Conditional },
             OrgTSTimestampActive { String },
             OrgTSTimestampInactive { Constant },
