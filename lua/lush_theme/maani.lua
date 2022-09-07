@@ -303,6 +303,10 @@ local theme = lush(function()
             -- aerial
             AerialLine              { bg=Pmenu.bg.lighten(50) },
             AerialGuide             { fg=ColorColumn.bg.lighten(25) },
+
+            -- headlines
+            CodeBlock { bg=slategray.darken(50) },
+            Headline { fg=white, bg=royalblue },
         }
 
     end)

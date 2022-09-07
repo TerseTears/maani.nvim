@@ -2,6 +2,8 @@
 
 ![](https://user-images.githubusercontent.com/36173945/132120638-adad3a59-54eb-4a24-a6fd-62afbe5aef46.png)
 
+![](https://user-images.githubusercontent.com/36173945/188885714-5d0e599b-d538-4d66-85ee-ce653456d96a.png)
+
 A theme inspired by the three colors of the Bosnian flag, and :heart:. Focus has been:
 
 * Using rather distinct and varied colors
@@ -43,6 +45,7 @@ These are the supported plugins
 - [Lualine](https://github.com/hoob3rt/lualine.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Aerial](https://github.com/stevearc/aerial.nvim)
+- [Headlines](https://github.com/lukas-reineke/headlines.nvim)
 - [Dashboard](https://github.com/glepnir/dashboard-nvim)
 - [Trouble](https://github.com/folke/trouble.nvim)
 - [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
