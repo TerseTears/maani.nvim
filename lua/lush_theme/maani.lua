@@ -42,7 +42,7 @@ vim.g.terminal_color_14 = lightskyblue.hex
 
 --- filetype colors
 
-vim.g.terminal_color_1 = firebrick.hex
+vim.g.terminal_color_1 = firebrick.saturate(100).lighten(25).hex
 vim.g.terminal_color_2 = limegreen.hex
 vim.g.terminal_color_5 = deeppink.hex
 vim.g.terminal_color_6 = deepskyblue.hex
@@ -276,7 +276,7 @@ local theme = lush(function()
 
             -- org-mode
             OrgAgendaScheduled { fg=deepskyblue.lighten(25) },
-            OrgAgendaScheduledPast { fg=dodgerblue.lighten(25), gui='bold' },
+            OrgAgendaScheduledPast { fg=cornflowerblue.lighten(25) },
             OrgAgendaDeadline { fg=magenta.lighten(25) },
             OrgTSTag { Conditional },
             OrgTSTimestampActive { String },
@@ -298,10 +298,10 @@ local theme = lush(function()
             OrgTSDirective { Special },
             OrgTODO { Keyword },
             OrgAgendaDay { Visual },
-            OrgAgendaTags { gui='inverse' },
+            OrgAgendaTags { gui='italic' },
 
             -- aerial
-            AerialLine              { bg=Pmenu.bg },
+            AerialLine              { bg=Pmenu.bg.lighten(50) },
             AerialGuide             { fg=ColorColumn.bg.lighten(25) },
         }
 
