@@ -276,7 +276,7 @@ local theme = lush(function()
 
             -- org-mode
             OrgAgendaScheduled { fg=deepskyblue.lighten(25) },
-            OrgAgendaScheduledPast { fg=cornflowerblue.lighten(25) },
+            OrgAgendaScheduledPast { fg=cornflowerblue.lighten(25).saturate(100) },
             OrgAgendaDeadline { fg=magenta.lighten(25) },
             OrgTSTag { Conditional },
             OrgTSTimestampActive { String },
@@ -298,7 +298,7 @@ local theme = lush(function()
             OrgTSDirective { Special },
             OrgTODO { Keyword },
             OrgAgendaDay { Visual },
-            OrgAgendaTags { gui='italic' },
+            OrgAgendaTags { gui='bold' },
 
             -- aerial
             AerialLine              { bg=Pmenu.bg.lighten(50) },
