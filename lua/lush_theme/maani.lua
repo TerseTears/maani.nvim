@@ -305,8 +305,8 @@ local theme = lush(function()
             AerialGuide             { fg=ColorColumn.bg.lighten(25) },
 
             -- headlines
-            CodeBlock { bg=slategray.darken(50) },
-            Headline { fg=white, bg=royalblue },
+            CodeBlock { bg=Normal.bg.lighten(5) },
+            Headline { bg=Normal.bg.lighten(10) },
         }
 
     end)
